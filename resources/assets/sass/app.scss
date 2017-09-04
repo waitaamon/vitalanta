@@ -1,0 +1,41 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "helpers/variables";
+@import "helpers/mixins";
+
+
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+//animate css
+@import "node_modules/animate-sass/animate";
+
+//Light Bootstrap dashboard
+@import "lbd/light-bootstrap-dashboard";
+
+
+// Vendor
+@import "vendor/videojs";
+@import "vendor/font-awesome";
+@import "vendor/pr-icons";
+
+
+
+// Components
+@import "components/video";
+@import "components/boostrap";
+@import "components/login-signup";
+
+
+//Partials
+@import "partials/navbar";
+@import "partials/social";
+
+//homepage
+
+@import "pages/homepage";
+

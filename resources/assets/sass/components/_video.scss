@@ -1,0 +1,80 @@
+.video-placeholder{
+  position: relative;
+  background-color: #111;
+  padding-top: 56.25%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.video-placeholder__header{
+   font-size: 14px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.video__views{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.video__voting{
+
+}
+.video__voting-button{
+
+  color: #636b6f;
+
+  &:hover, &:focus{
+    text-decoration: none;
+  }
+}
+
+.video__voting-button--voted{
+  color: #3097D1;
+}
+
+.video-comment{
+  margin-top: 10px;
+}
+.video-comment__input{
+  margin: 10px 0 10px 0;
+}
+
+/*video upload file button*/
+.upload-files{
+  .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .inputfile + label {
+    font-size: 1.25em;
+    padding: 0 4px;
+    font-weight: 600;
+    color: #8c8c8c;
+    @include add-border(2px,#ccc, "all");
+    background-color: transparent;
+    display: inline-block;
+  }
+
+  .inputfile:focus + label,
+  .inputfile + label:hover {
+    border-color: $brand-success;
+    color: $brand-success
+  }
+
+  .inputfile + label {
+    cursor: pointer; /* "hand" cursor */
+  }
+
+}
