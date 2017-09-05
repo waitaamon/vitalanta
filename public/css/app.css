@@ -16990,8 +16990,12 @@ html, body {
   width: 100% !important;
 }
 
-.login-register-wrapper .container {
-  padding-top: 10%;
+.login-register-wrapper .navbar-default {
+  background-color: transparent;
+}
+
+.login-register-wrapper .auth-box {
+  margin-top: 10%;
 }
 
 /*# sourceMappingURL=app.css.map */

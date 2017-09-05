@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.login_register.login_register')
 
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row auth-box">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Reset Password</div>
+            <div class="panel panel-success">
+                <div class="panel-heading text-center">Reset Password</div>
 
                 <div class="panel-body">
                     @if (session('status'))

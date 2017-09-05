@@ -8,11 +8,14 @@
   .navbar{
     position: absolute !important;
     width: 100% !important;
+
   }
 
-  .container{
+  .navbar-default{
+    background-color: transparent;
+  }
 
-    padding-top: 10%;
-
+  .auth-box{
+    margin-top: 10%;
   }
 }
