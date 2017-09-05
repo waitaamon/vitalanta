@@ -35,6 +35,13 @@
 
     @include('layouts.partials._navigation')
 
+    <div class="row text-center">
+        <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 ">
+            @include('partials._alerts')
+        </div>
+    </div>
+
+
     @yield('content')
 </div>
 

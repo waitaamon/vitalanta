@@ -35,6 +35,9 @@
 <body>
 
     <div id="app">
+        <div class="alerts">
+            @include('partials._alerts')
+        </div>
         <div class="wrapper">
             @if(Auth::user())
                 @include('layouts.partials._side_nav')

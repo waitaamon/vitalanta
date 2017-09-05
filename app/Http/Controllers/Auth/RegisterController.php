@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Events\Auth\UserRequestedActivationEmail;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -28,12 +29,11 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    protected $redirectTo = '/login';
 
     /**
      * Create a new controller instance.
      *
-     * @return void
      */
     public function __construct()
     {
@@ -69,6 +69,8 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'active' => false,
+            'activation_token' => str_random(255),
         ]);
 
         $user->channel()->create([
@@ -90,6 +92,13 @@ class RegisterController extends Controller
      */
     protected function registered(Request $request, $user)
     {
+        //event to send email
+
+        event(new UserRequestedActivationEmail($user));
+
         $this->guard()->logout();
+
+        return redirect($this->redirectPath())
+            ->withSuccess('Registered successfully,  please check your email to activate account.');
     }
 }

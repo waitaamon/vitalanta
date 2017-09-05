@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Builder;
+
 
 class User extends Authenticatable
 {
@@ -15,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','active','activation_token'
     ];
 
     /**
@@ -50,6 +52,27 @@ class User extends Authenticatable
 
         return $this->belongsToMany(Channel::class, 'subscriptions');
     }
+
+
+    //scope to activate account
+    public function scopeByActivationColumns(Builder $builder, $email, $token){
+
+        return $builder->where('email', $email )->where('activation_token',$token);
+    }
+
+    //scope to get user by email
+
+    /**
+     * @param Builder $builder
+     * @param $email
+     * @return Builder
+     */
+    public function scopeByEmail(Builder $builder, $email){
+
+        return $builder->where('email', $email);
+    }
+
+
 
     public function isSubscribedTo(Channel $channel){
 

@@ -17,7 +17,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+//activate account
+Route::get('/auth/activate', 'Auth\ActivationController@activate')->name('auth.activate');
+Route::get('/auth/activate/resend', 'Auth\ActivationResendController@showResendForm')->name('auth.activate.resend');
+Route::post('/auth/activate/resend', 'Auth\ActivationResendController@resend');
+
+//dashboard route
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+
+
 
 
 Route::post('/webhook/encoding', 'EncodingWebhookController@handle');
