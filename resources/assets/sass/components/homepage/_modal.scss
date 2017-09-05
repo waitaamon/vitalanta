@@ -1,0 +1,65 @@
+.modal-content{
+  border-radius: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/homepage-modal.jpg');
+  background-size: cover;
+  opacity: .8;
+
+  .modal-header{
+
+    min-height: 15em;
+    background: $brand-custom;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    opacity: .8;
+
+    button{
+      display: none;
+    }
+
+    h4{
+      font-size: 2.5em;
+      font-weight:600;
+      color: #ffffff;
+    }
+  }
+
+  .modal-body{
+
+    min-height: 17em;
+
+    .about-content{
+      padding-top: 2%;
+      p{
+        color: #ffffff;
+        line-height:1.5;
+        font-size: 1.2em;
+        text-align: justify;
+        font-family: 'Lato', sans-serif;
+      }
+    }
+    .panel{
+      border-radius: 0;
+
+      .panel-heading{
+        border-color: #800080;
+      }
+    }
+    .map{
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .contacts{
+      ul{
+        list-style: none;
+        li{
+          margin-top: 5px;
+          color: #ffffff;
+        }
+      }
+    }
+
+
+  }
+}

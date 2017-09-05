@@ -7,14 +7,17 @@
                 <h4 class="modal-title text-center" id="myModalLabel">About Vitalanta Inc.</h4>
             </div>
             <div class="modal-body">
-                <p>Vitalanta Coaching are here to guide everyone acquire/use the desired skills to grow all rounded in their
+                <div class="about-content">
+                    <p>Vitalanta Coaching are here to guide everyone acquire/use the desired skills to grow all rounded in their
 
-                    sphere of life and have a meaningful life. Academic, Spiritual, Physical, Financial, Personal Development
+                        sphere of life and have a meaningful life. Academic, Spiritual, Physical, Financial, Personal Development
 
-                    etc.</p>
-                <p>Our team is well experienced with years of motivational talks, mentorship, life coaching, corporate
+                        etc.</p>
+                    <p>Our team is well experienced with years of motivational talks, mentorship, life coaching, corporate
 
-                    training, seminars and workshop facilitation and personal financial counselling.</p>
+                        training, seminars and workshop facilitation and personal financial counselling.</p>
+                </div>
+
             </div>
 
         </div>

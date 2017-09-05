@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row auth-box">
         <div class="col-md-8 col-md-offset-2">
             <div class="registration-login-panel">
                 <div class="panel panel-success">

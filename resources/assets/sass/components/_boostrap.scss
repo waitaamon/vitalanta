@@ -2,8 +2,13 @@
   background-color: #1abc9c;
   border-color: #19b495;
   color: #ffffff !important;
+
+  &:hover, &:active{
+    color: #1abc9c !important;
+  }
 }
 
-.btn-link {
+a.btn-link {
   color: #1abc9c;
+  text-decoration: none;
 }

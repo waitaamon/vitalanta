@@ -3,10 +3,11 @@ html, body{
 }
 
 .homepage-wrapper{
-  background:linear-gradient( rgba(155, 89, 182, 0.5), rgba(155, 89, 182, 0.5)), url('https://images.unsplash.com/photo-1428956069401-a496097b26d1');
+  background: url('../img/homepage-background.png');
   height: 100vh;
+  width: 100%;
   background-size: cover;
-  opacity: 0.8;
+
 
 
   display: flex;
@@ -20,15 +21,27 @@ html, body{
     h1{
       font-size: 3em;
       font-weight: 900;
+      font-family: 'Lato', sans-serif;
+      line-height:1.5;
       text-transform: uppercase;
       color: #ffffff;
       margin-bottom:2%;
+      letter-spacing: 0.07em;
     }
 
     p{
      color: $brand-secondary;
       font-size: 15px;
       font-weight: 700;
+    }
+  }
+
+  .search-form{
+
+    .btn{
+      background-color: $brand-success;
+      color: #fff;
+      border-color: $brand-success;
     }
   }
 
@@ -62,7 +75,7 @@ html, body{
       li{
         margin-right:2%;
         a{
-          color: #c5c7c9;
+          color: #15c986;
           text-transform: uppercase;
 
           &:hover{
@@ -76,26 +89,33 @@ html, body{
 
 .homepage_nav{
   overflow: hidden;
+  width: 100%;
 
 
   nav.navbar{
     position: absolute;
+    min-height: 80px;
 
   }
   nav.navbar-default{
 
     border: none;
-    background-color: transparent;
+    width: 100%;
+    background-color: #5b529e;
+
 
     ul{
       li{
         a{
 
-          color: #c5c7c9;
+          color: #f3f5f7 !important;
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: none;
 
           &:hover{
 
-          color: #ffffff;
+          color: #cccccc !important;
         }
         }
 
@@ -104,35 +124,3 @@ html, body{
   }
 }
 
-.modal-content{
-  border-radius: 0;
-  opacity: .9;
-
-  .modal-header{
-    h4{
-      font-size: 1.5em;
-      font-weight:600;
-    }
-  }
-
-  .modal-body{
-    .panel{
-      border-radius: 0;
-
-      .panel-heading{
-        border-color: #800080;
-      }
-    }
-  .map{
-    overflow: hidden;
-  }
-    .contacts{
-      ul{
-        list-style: none;
-        li{
-          margin-top: 5px;
-        }
-      }
-    }
-  }
-}

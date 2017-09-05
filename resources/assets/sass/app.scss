@@ -2,6 +2,8 @@
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 // Variables
 @import "helpers/variables";
 @import "helpers/mixins";
@@ -29,6 +31,7 @@
 @import "components/video";
 @import "components/boostrap";
 @import "components/login-signup";
+@import "components/homepage/modal";
 
 
 //Partials
@@ -38,4 +41,5 @@
 //homepage
 
 @import "pages/homepage";
+@import "pages/login_register";
 

@@ -1,40 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.landing.landing')
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+@section('content')
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    {{--homepage navigation--}}
+    @include('layouts.landing.partials._navigation')
 
-    <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
-
-    <!-- Scripts -->
-    <script>
-        window.Laravel = <?php echo json_encode([
-            'csrfToken' => csrf_token(),
-        ]); ?>
-
-            window.amontube = {
-
-            url: '{{ config('app.url') }}',
-
-            user: {
-                id: {{ Auth::check() ? Auth::user()->id : 'null' }},
-                authenticated: {{ Auth::check() ? 'true' : 'false' }}
-            }
-        };
-    </script>
-</head>
-<body>
-<div id="app">
-
-    @include('layouts.partials._homepage_nav')
     <div class="homepage-wrapper">
+
 
         <div class="row">
             <div class="container">
@@ -79,25 +51,23 @@
         </div>
         <div class="row">
             <div class="homepage-bottom">
-                    <ul class="list-inline">
-                        <li style="color: #cccccc">&copy; All Rights Reserved. <span style="text-decoration: underline;">VITALANTA INC.</span></li>
-                        <li><a href="#" data-toggle="modal" data-target="#aboutUsModal">About us</a></li>
-                        <li><a href="#"  data-toggle="modal" data-target="#services">Services</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#contactUs">Contact us</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#newletterModal" class="btn btn-success">Join our newsletter</a></li>
+                <ul class="list-inline">
+                    <li style="color: #81ccba">&copy; All Rights Reserved. <span style=""> @php echo date('Y') @endphp</span></li>
+                    <li><a href="#" data-toggle="modal" data-target="#aboutUsModal">About us</a></li>
+                    <li><a href="#"  data-toggle="modal" data-target="#services">Services</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#contactUs">Contact us</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#newletterModal" class="btn btn-success">Join our newsletter</a></li>
 
-                    </ul>
+                </ul>
             </div>
         </div>
     </div>
 
-
-</div>
-
-<!-- Scripts -->
-<script src="/js/app.js"></script>
-</body>
-</html>
+@section('content')
 
 
-@include('layouts.partials._nav_modals')
+
+
+
+
+

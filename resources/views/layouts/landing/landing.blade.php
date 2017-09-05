@@ -11,8 +11,6 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="https://unpkg.com/vue-form-wizard/dist/vue-form-wizard.min.css">
-
     <link href="/css/app.css" rel="stylesheet">
 
     <!-- Scripts -->
@@ -21,7 +19,7 @@
             'csrfToken' => csrf_token(),
         ]); ?>
 
-        window.amontube = {
+            window.amontube = {
 
             url: '{{ config('app.url') }}',
 
@@ -33,31 +31,15 @@
     </script>
 </head>
 <body>
+<div id="app">
 
-    <div id="app">
-        <div class="alerts">
-            @include('partials._alerts')
-        </div>
-        <div class="wrapper">
-            @if(Auth::user())
-                @include('layouts.partials._side_nav')
-            @endif
+@yield('content')
 
-            <div class="main-panel">
-                @include('layouts.login_register.partials._navigation')
-                <div class="content">
-                    @yield('content')
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
+</div>
     <!-- Scripts -->
     <script src="/js/app.js"></script>
 </body>
 </html>
+
+
+@include('layouts.landing.partials._nav_modals')

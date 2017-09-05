@@ -33,16 +33,23 @@
 <body>
 <div id="app">
 
-    @include('layouts.partials._navigation')
+    <div class="login-register-wrapper">
 
-    <div class="row text-center">
-        <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 ">
-            @include('partials._alerts')
+        {{--login register navigation--}}
+        @include('layouts.login_register.partials._navigation')
+
+        {{--alerts--}}
+        <div class="row text-center">
+            <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 ">
+                @include('partials._alerts')
+            </div>
         </div>
+
+        {{--content--}}
+        @yield('content')
+
     </div>
 
-
-    @yield('content')
 </div>
 
 <!-- Scripts -->
