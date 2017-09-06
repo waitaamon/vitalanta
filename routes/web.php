@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('homepage');
 
+Route::get('/dash', function () {
+    return view('artist.dashboard');
+})->name('dash');
+
 Auth::routes();
 
 

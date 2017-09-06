@@ -16,7 +16,7 @@ class ComposerServiceProvider extends ServiceProvider
     {
         //
         view()->composer(
-            ['layouts.partials._navigation','layouts.partials._side_nav'],
+            ['layouts.login_register.partials._navigation','layouts.partials._side_nav'],
             \App\Http\ViewComposers\NavigationComposer::class
         );
     }

@@ -16,14 +16,15 @@
 //animate css
 @import "node_modules/animate-sass/animate";
 
-//Light Bootstrap dashboard
-@import "lbd/light-bootstrap-dashboard";
+/*//Light Bootstrap dashboard
+@import "lbd/light-bootstrap-dashboard";*/
 
 
 // Vendor
 @import "vendor/videojs";
 @import "vendor/font-awesome";
 @import "vendor/pr-icons";
+@import "vendor/pr_helper";
 
 
 
@@ -42,4 +43,5 @@
 
 @import "pages/homepage";
 @import "pages/login_register";
+@import "pages/dashboard";
 
